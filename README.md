@@ -1,21 +1,86 @@
 # SPIDER — Security Agency Concept
 
-Portfolio concept and redesign foundation for a premium contemporary security agency.
+Концептуальный редизайн сайта охранного агентства «Спайдер». Проект создан как портфельная работа и не является официальным сайтом компании.
 
-Built with React, Vite, GSAP, ScrollTrigger, and Lenis. The project is fully static and configured for deployment to a repository subpath on GitHub Pages. Pushes to `main` are built and published by GitHub Actions.
+[Live Demo](https://newocontrary.github.io/spider59/)
 
-## Development
+## О проекте
+
+SPIDER исследует, как сайт охранного агентства может сочетать ясное представление услуг, премиальную digital-айдентику и сдержанную интерактивность. В основе концепции — система визуальных сигналов, модульная сетка и идея связанной инфраструктуры безопасности.
+
+## Цель
+
+- переработать устаревший визуальный язык отрасли;
+- создать узнаваемую чёрно-красную digital-айдентику;
+- сохранить понятность услуг, сценариев и стоимости;
+- сделать взаимодействие выразительным, но не перегруженным эффектами;
+- подготовить адаптивную статическую сборку для GitHub Pages.
+
+## Основные особенности
+
+- адаптивный интерфейс для desktop, tablet и mobile;
+- анимации появления на GSAP и ScrollTrigger;
+- sticky storytelling в секции процесса реагирования;
+- интерактивная Canvas-сеть `SecurityVisual`;
+- собственный SVG-знак и геометрическая система пиктограмм;
+- плавная прокрутка на Lenis;
+- поддержка `prefers-reduced-motion`;
+- автоматический deployment через GitHub Actions и GitHub Pages.
+
+## Технологии
+
+`React` · `Vite` · `JavaScript` · `CSS` · `GSAP` · `ScrollTrigger` · `Lenis` · `Canvas API` · `SVG` · `GitHub Actions` · `GitHub Pages`
+
+## Дизайн
+
+Основная палитра построена вокруг трёх цветов:
+
+- `#000000` — базовое пространство и контраст;
+- `#df2531` — сигнал, действие и фирменный акцент;
+- `#ffffff` — типографика и ключевая информация.
+
+Красный используется как локальный источник света и сигнал состояния, а не как постоянный декоративный фон. Визуальная система опирается на архитектурную сетку, тонкие границы, контролируемую асимметрию и значительное негативное пространство.
+
+## Структура страницы
+
+1. Hero
+2. О компании и направления защиты
+3. Услуги и стоимость
+4. Brand statement
+5. Процесс реагирования
+6. Интерактивная сеть безопасности
+7. Преимущества
+8. Контактный блок
+9. Footer
+
+## Локальный запуск
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
-Quality checks:
+## Production build
 
 ```bash
-pnpm lint
-pnpm build
+npm run build
+npm run preview
 ```
 
-> Unofficial portfolio concept. This project is not an official website of SPIDER or any security company.
+Проверка качества:
+
+```bash
+npm run lint
+```
+
+## Deployment
+
+Проект собирается Vite с repository base path `/spider59/`. Workflow в `.github/workflows/deploy.yml` устанавливает зависимости, создаёт папку `dist` и публикует её в GitHub Pages после push в ветку `main`.
+
+## Disclaimer
+
+Проект является неофициальной концептуальной работой. Все упоминания бренда «Спайдер» используются исключительно в рамках демонстрации навыков веб-дизайна и frontend-разработки.
+
+## Автор
+
+Design & Development — [@newocontrary](https://github.com/newocontrary)

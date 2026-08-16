@@ -7,8 +7,9 @@ export default function Hero() {
   const root = useRef(null)
   useLayoutEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
+    let intro
     const context = gsap.context(() => {
-      const intro = gsap.timeline({ delay: 1.05, defaults: { ease: 'power4.out' } })
+      intro = gsap.timeline({ paused: true, defaults: { ease: 'power4.out' } })
       intro
         .from('.hero__eyebrow', { y: 18, opacity: 0, duration: 0.7 })
         .from('.hero__title-line > span', { yPercent: 110, duration: 1.05, stagger: 0.1 }, '-=0.42')
@@ -23,11 +24,18 @@ export default function Hero() {
         scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: 0.6 },
       })
     }, root)
-    return () => context.revert()
+    const playIntro = () => intro.play(0)
+    const cover = document.querySelector('.preloader')
+    if (!cover || cover.hidden) playIntro()
+    else window.addEventListener('spider:intro-complete', playIntro, { once: true })
+    return () => {
+      window.removeEventListener('spider:intro-complete', playIntro)
+      context.revert()
+    }
   }, [])
 
   return (
-    <section className="hero" id="top" ref={root} aria-labelledby="hero-title">
+    <section className="hero" id="top" ref={root} aria-labelledby="hero-title" data-pointer-ambient>
       <div className="hero__backdrop" aria-hidden="true">SPIDER</div>
       <div className="hero__network" aria-hidden="true"><i /><i /><i /><span /></div>
       <div className="container hero__inner hero__content">
@@ -37,9 +45,9 @@ export default function Hero() {
           <span className="hero__title-line"><span>без компромиссов.</span></span>
         </h1>
         <div className="hero__footer">
-          <p className="hero__description">Комплексная защита частных и коммерческих объектов.<br />Контроль, реагирование и безопасность 24/7.</p>
+          <p className="hero__description">Охрана частных и коммерческих объектов в Перми.<br />Пульт 24/7 и оперативное реагирование ГБР.</p>
           <Button className="hero__action" href="#contact">Подключить охрану</Button>
-          <p className="hero__index">00 <span>/</span> 05</p>
+          <p className="hero__index"><strong>5–7 мин</strong> <span>/</span> ГБР</p>
         </div>
       </div>
     </section>

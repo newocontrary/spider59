@@ -10,9 +10,11 @@ import SecurityVisual from './sections/SecurityVisual/SecurityVisual.jsx'
 import Services from './sections/Services/Services.jsx'
 import Statement from './sections/Statement/Statement.jsx'
 import { useSmoothScroll } from './hooks/useSmoothScroll.js'
+import { usePointerAmbient } from './hooks/usePointerAmbient.js'
 
 function App() {
   useSmoothScroll()
+  usePointerAmbient()
 
   return (
     <>

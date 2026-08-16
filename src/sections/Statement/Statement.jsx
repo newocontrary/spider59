@@ -21,7 +21,8 @@ export default function Statement() {
   }, [])
 
   return (
-    <section className="statement" id="statement" ref={root} aria-labelledby="statement-title">
+    <section className="statement" id="statement" ref={root} aria-labelledby="statement-title" data-pointer-ambient>
+      <span className="pointer-ambient__glow" aria-hidden="true" />
       <div className="container statement__inner">
         <div className="statement__meta"><span>—</span><i className="statement__rule" /></div>
         <h2 className="statement__text" id="statement-title">

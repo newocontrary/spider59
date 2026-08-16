@@ -18,16 +18,27 @@ export function useSmoothScroll() {
       event.preventDefault()
       lenis.scrollTo(target, { offset: 0, duration: 1.1 })
     }
+    const lockIntro = () => lenis.stop()
+    const releaseIntro = () => {
+      lenis.scrollTo(0, { immediate: true, force: true })
+      lenis.start()
+      ScrollTrigger.refresh()
+    }
 
     lenis.on('scroll', updateScroll)
     gsap.ticker.add(tick)
     gsap.ticker.lagSmoothing(0)
     document.addEventListener('click', handleAnchor)
+    window.addEventListener('spider:intro-lock', lockIntro)
+    window.addEventListener('spider:intro-release', releaseIntro)
+    if (document.documentElement.classList.contains('is-intro-locked')) lenis.stop()
 
     return () => {
       lenis.off('scroll', updateScroll)
       gsap.ticker.remove(tick)
       document.removeEventListener('click', handleAnchor)
+      window.removeEventListener('spider:intro-lock', lockIntro)
+      window.removeEventListener('spider:intro-release', releaseIntro)
       lenis.destroy()
     }
   }, [])

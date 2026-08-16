@@ -8,6 +8,9 @@
   --color-text-muted: rgba(255, 255, 255, 0.58);
   --color-red-65: rgba(223, 37, 49, 0.65);
   --color-red-45: rgba(223, 37, 49, 0.45);
+  --surface-red-dark: #160506;
+  --red-ambient-soft: radial-gradient(circle at 82% 42%, rgba(223, 37, 49, 0.12), rgba(223, 37, 49, 0.035) 34%, transparent 66%);
+  --red-ambient-medium: radial-gradient(circle at 76% 48%, rgba(223, 37, 49, 0.2), rgba(92, 12, 17, 0.1) 36%, transparent 68%);
   --container-width: 90rem;
   --page-padding: clamp(1.25rem, 4vw, 4.5rem);
   --section-space: clamp(6rem, 14vw, 13.75rem);
@@ -16,6 +19,10 @@
   --font-display-xl: clamp(3.2rem, 8.8vw, 9rem);
   --font-display-lg: clamp(3rem, 7vw, 7rem);
   --font-heading: clamp(2.25rem, 5vw, 4.5rem);
+  --display-hero: clamp(4rem, 8.8vw, 9rem);
+  --display-section-xl: clamp(3.1rem, 5.4vw, 5.4rem);
+  --display-section-lg: clamp(2.7rem, 4.6vw, 4.5rem);
+  --display-card: clamp(1.65rem, 2.65vw, 2.9rem);
   --font-body-lg: clamp(1.05rem, 1.5vw, 1.32rem);
   --font-body: clamp(0.9rem, 1.1vw, 1rem);
   --font-caption: 0.62rem;
