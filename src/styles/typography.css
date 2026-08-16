@@ -1,0 +1,2 @@
+body { font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; font-synthesis: none; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.eyebrow { color: var(--color-text-muted); font-size: var(--font-caption); font-weight: 600; letter-spacing: 0.17em; text-transform: uppercase; }

@@ -1,0 +1,29 @@
+.about { padding-block: clamp(8rem, 16vw, 15rem); border-bottom: 1px solid var(--color-border); }
+.about__grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
+.about__eyebrow { grid-column: 1 / span 3; }
+.about__eyebrow span { color: var(--color-red); }
+.about__title { font-size: clamp(2.7rem, 6.2vw, 6.4rem); font-weight: 500; letter-spacing: -0.062em; line-height: 0.93; text-transform: uppercase; grid-column: 4 / -1; }
+.about__line { display: block; overflow: hidden; padding-bottom: 0.06em; }
+.about__line > span { display: block; overflow-wrap: normal; word-break: normal; }
+.about__title em { color: var(--color-red); font-style: normal; }
+.about__copy { max-width: 35rem; margin-top: clamp(4rem, 8vw, 7rem); color: var(--color-text-muted); font-size: var(--font-body-lg); grid-column: 7 / span 5; }
+.about__stats { display: grid; margin-top: clamp(6rem, 12vw, 10rem); grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap); grid-column: 1 / -1; }
+.about__stat { display: flex; min-height: 11rem; flex-direction: column; justify-content: space-between; padding-top: 1.2rem; border-top: 1px solid var(--color-border); }
+.about__stat strong { font-size: clamp(2.5rem, 4.2vw, 4.8rem); font-weight: 500; letter-spacing: -0.055em; line-height: 1; text-transform: uppercase; }
+.about__stat span { color: var(--color-text-muted); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+
+@media (max-width: 1023px) {
+  .about__grid { grid-template-columns: repeat(8, 1fr); }
+  .about__eyebrow { grid-column: 1 / span 2; }
+  .about__title { grid-column: 3 / -1; }
+  .about__copy { grid-column: 4 / -1; }
+}
+
+@media (max-width: 767px) {
+  .about__grid { grid-template-columns: repeat(4, 1fr); }
+  .about__eyebrow, .about__title, .about__copy, .about__stats { grid-column: 1 / -1; }
+  .about__title { margin-top: 2.5rem; font-size: clamp(2.5rem, 12vw, 4rem); }
+  .about__copy { margin-top: 3rem; }
+  .about__stats { grid-template-columns: 1fr; }
+  .about__stat { min-height: 8.5rem; }
+}

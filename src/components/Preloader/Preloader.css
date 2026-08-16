@@ -1,0 +1,12 @@
+.preloader { position: fixed; z-index: var(--z-preloader); inset: 0; display: grid; place-content: center; background: var(--color-black); }
+.preloader__brand { display: flex; align-items: center; gap: 0.9rem; }
+.preloader__mark { width: 2.5rem; height: 2.5rem; }
+.preloader .logo-mark__route { stroke-dasharray: 100; stroke-dashoffset: 100; }
+.preloader .logo-mark__branch { stroke-dasharray: 20; stroke-dashoffset: 20; }
+.preloader__word { display: flex; overflow: hidden; align-items: flex-start; flex-direction: column; gap: 0.28rem; line-height: 1; }
+.preloader__name { display: block; font-size: 0.9rem; font-weight: 700; letter-spacing: -0.02em; }
+.preloader__descriptor { color: var(--color-text-muted); font-size: 0.44rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; }
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader .logo-mark__route, .preloader .logo-mark__branch { stroke-dashoffset: 0; }
+}

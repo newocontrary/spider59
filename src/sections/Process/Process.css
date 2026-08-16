@@ -1,0 +1,35 @@
+.process { padding-block: var(--section-space); border-bottom: 1px solid var(--color-border); }
+.process__intro { display: grid; align-items: end; grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
+.process__eyebrow { align-self: start; grid-column: 1 / span 3; }
+.process__eyebrow span { color: var(--color-red); }
+.process__intro h2 { font-size: var(--font-heading); font-weight: 500; letter-spacing: -0.06em; line-height: 0.92; text-transform: uppercase; grid-column: 4 / span 7; }
+.process__steps { position: relative; display: grid; margin-top: clamp(6rem, 12vw, 11rem); grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap); }
+.process__track { position: absolute; top: 0.2rem; right: 0; left: 0; height: 1px; background: var(--color-border); }
+.process__progress { display: block; width: 100%; height: 1px; background: var(--color-red); transform: scaleX(0); transform-origin: left; }
+.process__step { position: relative; min-height: 16rem; padding-top: 2.2rem; }
+.process__node { position: absolute; top: -0.04rem; left: 0; width: 0.5rem; height: 0.5rem; border: 1px solid rgba(255,255,255,0.4); background: var(--color-black); transform: translateY(-50%); }
+.process__number { color: var(--color-text-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.64rem; letter-spacing: 0.14em; }
+.process__step h3 { margin-top: clamp(3rem, 6vw, 5.5rem); font-size: clamp(1.35rem, 2.2vw, 2.25rem); font-weight: 500; letter-spacing: -0.04em; text-transform: uppercase; }
+.process__step p { max-width: 16rem; margin-top: 1rem; color: var(--color-text-muted); font-size: 0.84rem; }
+
+@media (max-width: 1023px) {
+  .process__intro { grid-template-columns: repeat(8, 1fr); }
+  .process__eyebrow { grid-column: 1 / span 2; }
+  .process__intro h2 { grid-column: 3 / -1; }
+}
+
+@media (max-width: 767px) {
+  .process__intro { grid-template-columns: repeat(4, 1fr); }
+  .process__eyebrow, .process__intro h2 { grid-column: 1 / -1; }
+  .process__intro h2 { margin-top: 2.5rem; }
+  .process__steps { display: block; margin-left: 0.2rem; }
+  .process__track { top: 0; bottom: 0; left: 0; width: 1px; height: auto; }
+  .process__progress { width: 1px; height: 100%; transform: scaleY(0); transform-origin: top; }
+  .process__step { min-height: 13rem; padding: 0 0 3rem 2rem; }
+  .process__node { top: 0.15rem; left: -0.2rem; }
+  .process__step h3 { margin-top: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process__progress { transform: none; }
+}

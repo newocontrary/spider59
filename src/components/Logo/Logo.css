@@ -1,0 +1,32 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.62rem;
+  color: currentColor;
+  line-height: 1;
+}
+
+.logo-mark { display: block; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; overflow: visible; }
+.logo-mark__route, .logo-mark__branch { stroke: currentColor; stroke-width: 1.7; stroke-linecap: square; stroke-linejoin: miter; }
+.logo-mark__node { fill: currentColor; }
+.logo-mark__node--accent { fill: var(--color-red); }
+.logo__wordmark { display: flex; align-items: flex-start; flex-direction: column; gap: 0.2rem; }
+
+.logo__name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.logo__descriptor {
+  color: var(--color-text-muted);
+  font-size: 0.43rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.logo--compact .logo__name { font-size: 0.92rem; }
+.logo--compact .logo-mark { width: 1.5rem; height: 1.5rem; }
+.logo--mark-only { display: inline-flex; }
+.logo--mark-only .logo-mark { width: 100%; height: 100%; }
