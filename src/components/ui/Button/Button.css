@@ -17,11 +17,15 @@
 .button__content { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 2rem; will-change: transform; }
 
 .button--primary { background: var(--red-primary); color: var(--color-white); }
-.button--primary:hover { background: var(--color-white); color: var(--color-black); }
 .button--text { min-height: auto; border-color: var(--color-border); padding: 0.75rem 0.9rem; }
-.button--text:hover { border-color: var(--color-white); }
-.button__arrow { font-size: 1rem; font-weight: 400; transition: transform var(--transition-fast); }
-.button:hover .button__arrow { transform: translate(2px, -2px); }
+.button__arrow { width: 1rem; height: 1rem; flex: 0 0 auto; transition: transform var(--transition-fast); }
+.button:active .button__arrow { transform: translate(2px, -2px); }
+
+@media (hover: hover) and (pointer: fine) {
+  .button--primary:hover { background: var(--color-white); color: var(--color-black); }
+  .button--text:hover { border-color: var(--color-white); }
+  .button:hover .button__arrow { transform: translate(2px, -2px); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .button__content { transform: none !important; }

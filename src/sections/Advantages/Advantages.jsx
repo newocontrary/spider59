@@ -51,7 +51,15 @@ export default function Advantages() {
       })
 
       media.add('(max-width: 1023px)', () => {
-        gsap.from('.advantage', { y: 28, opacity: 0, duration: 0.75, stagger: 0.09, ease: 'power3.out', scrollTrigger: { trigger: '.advantages__list', start: 'top 86%', once: true } })
+        gsap.fromTo('.advantage', { y: 28, opacity: 0 }, {
+          y: 0,
+          opacity: 1,
+          duration: 0.75,
+          stagger: 0.09,
+          ease: 'power3.out',
+          immediateRender: false,
+          scrollTrigger: { trigger: '.advantages__list', start: 'top 86%', once: true, invalidateOnRefresh: true },
+        })
       })
     }, root)
     return () => {

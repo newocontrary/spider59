@@ -44,6 +44,14 @@
   --section-space: clamp(6rem, 14vw, 13.75rem);
   --grid-gap: clamp(0.75rem, 1.5vw, 1.5rem);
   --header-height: clamp(3.75rem, 5.4vw, 4.75rem);
+  --mobile-section-space: 6rem;
+  --mobile-content-gap: 3rem;
+  --mobile-card-padding: 1.5rem;
+  --tap-target: 2.75rem;
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
   --font-display-xl: clamp(3.2rem, 8.8vw, 9rem);
   --font-display-lg: clamp(3rem, 7vw, 7rem);
   --font-heading: clamp(2.25rem, 5vw, 4.5rem);

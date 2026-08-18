@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from 'react'
+import ArrowUpRight from '../../components/icons/ArrowUpRight.jsx'
 import { gsap } from '../../utils/motion.js'
 import './Services.css'
 
@@ -44,7 +45,7 @@ export default function Services() {
               <ul>{service.points.map((point) => <li key={point}>{point}</li>)}</ul>
               <div className="service-item__footer">
                 <p className="service-item__price">{service.price} {service.unit && <small>{service.unit}</small>}</p>
-                <a href="#contact" aria-label={`Обсудить услугу: ${service.title}`}><span>Обсудить</span><i aria-hidden="true">↗</i></a>
+                <a href="#contact" aria-label={`Обсудить услугу: ${service.title}`}><span>Обсудить</span><ArrowUpRight className="service-item__arrow" /></a>
               </div>
             </article>
           ))}

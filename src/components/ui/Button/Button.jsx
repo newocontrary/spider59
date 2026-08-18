@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from '../../../utils/motion.js'
+import ArrowUpRight from '../../icons/ArrowUpRight.jsx'
 import './Button.css'
 
 export default function Button({ children, variant = 'primary', href, className = '', magnetic = true, ...props }) {
@@ -36,7 +37,7 @@ export default function Button({ children, variant = 'primary', href, className 
 
   const content = (
     <span className="button__content" ref={contentRef}>
-      <span>{children}</span><span className="button__arrow" aria-hidden="true">↗</span>
+      <span>{children}</span><ArrowUpRight className="button__arrow" />
     </span>
   )
 

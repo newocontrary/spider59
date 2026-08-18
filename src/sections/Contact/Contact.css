@@ -17,7 +17,7 @@
 .contact__data address { font: inherit; }
 .contact__data a { position: relative; white-space: nowrap; }
 .contact__data a::after { position: absolute; right: 0; bottom: -0.25rem; left: 0; height: 1px; background: currentColor; content: ''; opacity: 0.72; transform: scaleX(0); transform-origin: right; transition: transform var(--transition-fast); }
-.contact__data a:hover::after, .contact__data a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.contact__data a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
 
 @media (max-width: 1023px) {
   .contact__body { grid-template-columns: repeat(8, 1fr); }
@@ -27,11 +27,16 @@
 }
 
 @media (max-width: 767px) {
-  .contact { padding-block: 8rem; }
+  .contact { padding-block: var(--mobile-section-space); }
   .contact::before { top: 38%; right: -35%; bottom: 0; width: 150%; }
   .contact__body { display: block; margin-top: 3.5rem; }
   .contact__title { font-size: clamp(2.3rem, 9.65vw, 3.8rem); letter-spacing: -0.025em; line-height: 0.96; }
   .contact__action { width: 100%; }
   .contact__data { margin-top: 4rem; grid-template-columns: 1fr; }
   .contact__data > div { min-height: 7.5rem; }
+  .contact__data a { display: inline-flex; min-height: var(--tap-target); align-items: center; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact__data a:hover::after { transform: scaleX(1); transform-origin: left; }
 }

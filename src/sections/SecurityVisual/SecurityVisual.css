@@ -25,8 +25,8 @@
 }
 
 @media (max-width: 767px) {
-  .security-visual { min-height: max(100svh, 47rem); }
-  .security-visual__inner { min-height: max(100svh, 47rem); padding-block: 6.5rem 2.5rem; grid-template-columns: repeat(4, 1fr); }
+  .security-visual { min-height: max(100svh, 44rem); }
+  .security-visual__inner { min-height: max(100svh, 44rem); padding-block: 5.75rem max(2.5rem, calc(var(--safe-area-bottom) + 1.5rem)); grid-template-columns: repeat(4, 1fr); }
   .security-visual__copy { align-self: start; grid-column: 1 / -1; }
   .security-visual__copy h2 { max-width: none; margin-top: 2.5rem; font-size: clamp(3rem, 13.5vw, 4.1rem); line-height: 0.9; }
   .security-visual__note { max-width: 19rem; margin-top: 1.75rem; margin-left: 0; font-size: 0.9rem; }
