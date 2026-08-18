@@ -30,6 +30,7 @@ export default function Advantages() {
             item.classList.toggle('is-past', itemIndex < index)
           })
           activeNumber.textContent = advantages[index].number
+          root.current.style.setProperty('--advantage-node-y', `${(index + 0.5) * 25}%`)
         }
         setActive(0)
         gsap.fromTo('.advantages__progress', { scaleY: 0 }, {
@@ -69,13 +70,13 @@ export default function Advantages() {
           <h2 className="advantages__title" id="advantages-title">
             <span className="advantages__title-line"><span>Защита,</span></span>
             <span className="advantages__title-line"><span>которой можно</span></span>
-            <span className="advantages__title-line"><span>доверять.</span></span>
+            <span className="advantages__title-line"><span>доверять</span></span>
           </h2>
           <p className="advantages__lead">Комплексный подход к безопасности частных и коммерческих объектов.</p>
         </div>
         <div className="advantages__sequence">
           <div className="advantages__active-number" aria-hidden="true">01</div>
-          <div className="advantages__rail" aria-hidden="true"><i className="advantages__progress" /></div>
+          <div className="advantages__rail" aria-hidden="true"><i className="advantages__progress" /><span className="advantages__node" /></div>
           <div className="advantages__list">
             {advantages.map((item) => (
               <article className="advantage" key={item.number}>

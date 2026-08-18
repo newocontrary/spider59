@@ -28,7 +28,7 @@ export default function Statement() {
         <h2 className="statement__text" id="statement-title">
           <span className="statement__line"><span>Ваша <em>безопасность</em></span></span>
           <span className="statement__line"><span>не должна зависеть</span></span>
-          <span className="statement__line"><span>от случая.</span></span>
+          <span className="statement__line"><span>от случая</span></span>
         </h2>
       </div>
     </section>

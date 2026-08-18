@@ -43,7 +43,7 @@ export default function SecurityVisual() {
       <div className="container security-visual__inner">
         <div className="security-visual__copy">
           <p className="eyebrow security-visual__label">Security network</p>
-          <h2 id="security-visual-title">Система<br />под контролем.</h2>
+          <h2 id="security-visual-title">Система<br />под контролем</h2>
           <p className="security-visual__note">Контроль, мониторинг и реагирование работают как единая инфраструктура безопасности.</p>
         </div>
         <p className="security-visual__status" aria-hidden="true"><i /> Network active</p>

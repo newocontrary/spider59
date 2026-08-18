@@ -1,24 +1,25 @@
-.advantages { --ambient-opacity: 0.1; --ambient-word-top: 13%; --ambient-word-left: -4%; position: relative; overflow: hidden; border-bottom: 1px solid var(--color-border); background: linear-gradient(180deg, #050505, #090303); }
+.advantages { --advantage-node-y: 12.5%; --ambient-opacity: 0.06; --ambient-word-top: 13%; --ambient-word-left: -4%; position: relative; overflow: hidden; border-bottom: 1px solid var(--color-border); background-color: var(--bg-warm-dark); background-image: radial-gradient(circle at 18% 76%, rgba(223,37,49,0.065), transparent 43%), linear-gradient(145deg, rgba(255,255,255,0.016), transparent 44%); }
 .advantages__stage { position: relative; z-index: 1; display: grid; min-height: 100svh; align-items: center; padding-block: clamp(7rem, 12vh, 10rem); grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
 .advantages__intro { align-self: center; grid-column: 1 / span 5; }
 .advantages__eyebrow span { color: var(--color-red); }
-.advantages__title { max-width: 100%; margin-top: clamp(2.5rem, 5vh, 4.5rem); font-size: var(--display-section-lg); font-weight: 500; letter-spacing: -0.055em; line-height: 0.94; text-transform: uppercase; }
+.advantages__title { max-width: 100%; margin-top: clamp(2.5rem, 5vh, 4.5rem); font-size: clamp(2.44rem, 3.8vw, 3.95rem); font-weight: var(--font-display-weight); letter-spacing: -0.03em; line-height: 0.94; text-transform: uppercase; }
 .advantages__title-line { display: block; overflow: hidden; margin-block: -0.08em; padding: 0.08em 0.08em 0.08em 0; }
 .advantages__title-line > span { display: block; overflow-wrap: normal; word-break: normal; }
-.advantages__lead { max-width: 34ch; margin-top: clamp(2rem, 4vh, 3.25rem); color: var(--color-text-muted); font-size: var(--font-body-lg); text-wrap: pretty; }
+.advantages__lead { max-width: 34ch; margin-top: clamp(2rem, 4vh, 3.25rem); color: var(--color-text-primary); font-size: var(--font-body-lg); text-wrap: pretty; }
 .advantages__sequence { position: relative; display: grid; min-height: 39rem; align-content: end; padding-left: clamp(3rem, 6vw, 6rem); grid-column: 6 / -1; }
-.advantages__active-number { position: absolute; top: -0.08em; right: 0; color: transparent; font-size: clamp(9rem, 16vw, 17rem); font-weight: 600; letter-spacing: -0.08em; line-height: 0.72; pointer-events: none; -webkit-text-stroke: 1px rgba(223,37,49,0.28); }
+.advantages__active-number { position: absolute; top: -0.08em; right: 0; color: transparent; font-family: var(--font-display-outline); font-size: clamp(9rem, 16vw, 17rem); font-weight: 600; letter-spacing: -0.04em; line-height: 0.72; pointer-events: none; -webkit-text-stroke: 1px rgba(230,37,50,0.36); }
 .advantages__rail { position: absolute; top: 0; bottom: 0; left: 0; width: 1px; background: var(--color-border); }
 .advantages__progress { display: block; width: 1px; height: 100%; background: var(--color-red); transform: scaleY(0); transform-origin: top; }
+.advantages__node { position: absolute; top: var(--advantage-node-y); left: 50%; width: 7px; height: 7px; border: 1px solid var(--color-red); background: var(--bg-warm-dark); transform: translate(-50%, -50%); transition: top 380ms var(--ease-premium), background-color 380ms var(--ease-premium); }
 .advantages__list { position: relative; }
-.advantage { display: grid; align-items: center; min-height: 7.4rem; padding-block: 1.4rem; border-top: 1px solid var(--color-border); grid-template-columns: 4.5rem 1fr; gap: clamp(1rem, 2vw, 2rem); opacity: 0.27; transition: opacity 380ms var(--ease-premium), border-color 380ms var(--ease-premium); }
+.advantage { display: grid; align-items: center; min-height: 7.4rem; padding-block: 1.4rem; border-top: 1px solid var(--color-border); grid-template-columns: 4.5rem 1fr; gap: clamp(1rem, 2vw, 2rem); opacity: 0.5; transition: opacity 380ms var(--ease-premium), border-color 380ms var(--ease-premium); }
 .advantage:last-child { border-bottom: 1px solid var(--color-border); }
-.advantage.is-past { opacity: 0.5; }
-.advantage.is-active { border-color: rgba(223,37,49,0.55); opacity: 1; }
-.advantage__number { color: transparent; font-size: clamp(2.6rem, 4vw, 4.2rem); font-weight: 600; letter-spacing: -0.07em; line-height: 0.8; -webkit-text-stroke: 1px rgba(255,255,255,0.24); transition: color 380ms var(--ease-premium), -webkit-text-stroke-color 380ms var(--ease-premium); }
+.advantage.is-past { opacity: 0.68; }
+.advantage.is-active { border-color: rgba(230,37,50,0.66); opacity: 1; }
+.advantage__number { color: transparent; font-family: var(--font-display-outline); font-size: clamp(2.6rem, 4vw, 4.2rem); font-weight: 600; letter-spacing: -0.03em; line-height: 0.8; -webkit-text-stroke: 1px rgba(255,255,255,0.24); transition: color 380ms var(--ease-premium), -webkit-text-stroke-color 380ms var(--ease-premium); }
 .advantage.is-active .advantage__number { color: var(--color-red); -webkit-text-stroke-color: var(--color-red); }
-.advantage h3 { max-width: 19ch; font-size: clamp(1.25rem, 1.85vw, 1.9rem); font-weight: 500; letter-spacing: -0.045em; line-height: 1; text-transform: uppercase; }
-.advantage p { max-width: 30rem; margin-top: 0.7rem; color: var(--color-text-muted); font-size: 0.84rem; }
+.advantage h3 { max-width: 19ch; font-size: clamp(1.25rem, 1.85vw, 1.9rem); font-weight: var(--font-display-weight); letter-spacing: -0.02em; line-height: 1; text-transform: uppercase; }
+.advantage p { max-width: 30rem; margin-top: 0.7rem; color: var(--color-text-secondary); font-size: 0.84rem; }
 
 @media (min-width: 768px) {
   .advantages__title-line > span { white-space: nowrap; }
@@ -36,7 +37,7 @@
 }
 
 @media (max-width: 767px) {
-  .advantages__title { max-width: 10ch; margin-top: 2.5rem; font-size: clamp(2.55rem, 10.4vw, 4rem); letter-spacing: -0.05em; line-height: 0.96; }
+  .advantages__title { max-width: 10ch; margin-top: 2.5rem; font-size: clamp(2.55rem, 10.4vw, 4rem); letter-spacing: -0.025em; line-height: 0.96; }
   .advantages__lead { margin-top: 2rem; }
   .advantage { min-height: 0; align-items: start; padding-block: 1.75rem; grid-template-columns: 3.5rem 1fr; }
   .advantage__number { font-size: 2.6rem; }

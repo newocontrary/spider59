@@ -8,7 +8,8 @@
 .preloader .logo-mark__route { stroke-dasharray: 100; stroke-dashoffset: 100; }
 .preloader .logo-mark__branch { stroke-dasharray: 20; stroke-dashoffset: 20; }
 .preloader__word { display: flex; min-width: 0; overflow: hidden; align-items: flex-start; flex-direction: column; gap: clamp(0.8rem, 1.4vw, 1.35rem); padding-right: 0.08em; line-height: 0.78; }
-.preloader__name { display: block; max-width: 100%; font-size: clamp(5.8rem, 17.2vw, 20rem); font-weight: 600; letter-spacing: -0.085em; white-space: nowrap; }
+.preloader__name { display: block; max-width: 100%; cursor: default; font-size: clamp(5.8rem, 17.2vw, 20rem); font-weight: 600; letter-spacing: -0.085em; pointer-events: none; user-select: none; white-space: nowrap; -webkit-user-drag: none; -webkit-user-select: none; }
+.preloader__name::before { content: attr(data-word); }
 .preloader__subtitle { margin-left: 0.08em; color: rgba(255,255,255,0.7); font-size: clamp(0.66rem, 0.86vw, 0.9rem); font-weight: 600; letter-spacing: 0.2em; line-height: 1.4; text-transform: uppercase; }
 .preloader__prompt { position: absolute; right: var(--page-padding); bottom: clamp(2.5rem, 5vw, 5rem); color: rgba(255,255,255,0.7); font-size: clamp(0.7rem,0.72vw,0.82rem); font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; }
 .preloader__prompt i { display: inline-block; margin-left: 0.7rem; color: var(--color-red); font-style: normal; }

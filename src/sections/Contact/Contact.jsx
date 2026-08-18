@@ -26,7 +26,7 @@ export default function Contact() {
             <h2 className="contact__title" id="contact-title">
               <span className="contact__title-line"><span>Спокойствие</span></span>
               <span className="contact__title-line"><span>начинается</span></span>
-              <span className="contact__title-line"><span>с защиты.</span></span>
+              <span className="contact__title-line"><span>с защиты</span></span>
             </h2>
             <p className="contact__lead">Расскажите об объекте — отдел продаж подберёт оборудование, тариф и формат реагирования.</p>
             <Button className="contact__action" href="tel:+73422060899">Оставить заявку</Button>

@@ -16,7 +16,7 @@
 
 .button__content { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 2rem; will-change: transform; }
 
-.button--primary { background: var(--color-red); color: var(--color-white); }
+.button--primary { background: var(--red-primary); color: var(--color-white); }
 .button--primary:hover { background: var(--color-white); color: var(--color-black); }
 .button--text { min-height: auto; border-color: var(--color-border); padding: 0.75rem 0.9rem; }
 .button--text:hover { border-color: var(--color-white); }

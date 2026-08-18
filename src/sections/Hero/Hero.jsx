@@ -42,7 +42,7 @@ export default function Hero() {
         <p className="eyebrow hero__eyebrow">Охранное агентство <span /> Пермь</p>
         <h1 className="hero__title" id="hero-title">
           <span className="hero__title-line"><span>Безопасность</span></span>
-          <span className="hero__title-line"><span>без компромиссов.</span></span>
+          <span className="hero__title-line"><span>без компромиссов</span></span>
         </h1>
         <div className="hero__footer">
           <p className="hero__description">Охрана частных и коммерческих объектов в Перми.<br />Пульт 24/7 и оперативное реагирование ГБР.</p>

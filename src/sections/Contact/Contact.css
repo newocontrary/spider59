@@ -1,18 +1,18 @@
-.contact { --ambient-opacity: 0.14; --ambient-word-top: 6%; --ambient-word-left: 2%; position: relative; overflow: hidden; padding-block: clamp(8rem, 13vw, 13rem); border-bottom: 1px solid var(--color-border); background: #080202; }
-.contact::before { position: absolute; z-index: 0; top: 12%; right: -8%; bottom: 8%; width: 68%; background: radial-gradient(circle at 42% 52%, rgba(223,37,49,0.25), rgba(92,9,14,0.11) 36%, transparent 70%); content: ''; pointer-events: none; }
+.contact { --ambient-opacity: 0.09; --ambient-word-top: 6%; --ambient-word-left: 2%; position: relative; overflow: hidden; padding-block: clamp(8rem, 13vw, 13rem); border-bottom: 1px solid var(--color-border); background-color: var(--bg-burgundy); background-image: linear-gradient(180deg, rgba(255,255,255,0.012), transparent 32%); }
+.contact::before { position: absolute; z-index: 0; top: 8%; right: -10%; bottom: 4%; width: 72%; background: radial-gradient(circle at 42% 52%, rgba(223,37,49,0.22), rgba(92,9,14,0.09) 38%, transparent 70%); content: ''; pointer-events: none; }
 .contact__inner { position: relative; z-index: 1; }
 .contact__eyebrow span { color: var(--color-red); }
 .contact__body { display: grid; align-items: stretch; margin-top: clamp(4rem, 8vw, 7rem); grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
 .contact__intro { display: flex; align-items: flex-start; flex-direction: column; grid-column: 1 / span 5; }
-.contact__title { max-width: 100%; font-size: var(--display-section-xl); font-weight: 500; letter-spacing: -0.06em; line-height: 0.94; text-transform: uppercase; }
+.contact__title { max-width: 100%; font-size: clamp(2.7rem, 4.45vw, 4.85rem); font-weight: var(--font-display-weight); letter-spacing: -0.03em; line-height: 0.94; text-transform: uppercase; }
 .contact__title-line { display: block; overflow: hidden; margin-block: -0.08em; padding: 0.08em 0.08em 0.08em 0; }
 .contact__title-line > span { display: block; overflow-wrap: normal; word-break: normal; white-space: nowrap; }
-.contact__lead { max-width: 34ch; margin-top: clamp(2.25rem, 4vw, 3.5rem); color: rgba(255,255,255,0.72); font-size: var(--font-body-lg); text-wrap: pretty; }
+.contact__lead { max-width: 34ch; margin-top: clamp(2.25rem, 4vw, 3.5rem); color: var(--color-text-primary); font-size: var(--font-body-lg); text-wrap: pretty; }
 .contact__action { min-width: min(100%, 24rem); margin-top: clamp(2.5rem, 5vw, 4rem); }
-.contact__data { display: grid; align-self: end; margin: 0; border-top: 1px solid rgba(255,255,255,0.18); border-left: 1px solid rgba(255,255,255,0.18); background: rgba(10,2,3,0.56); backdrop-filter: blur(6px); grid-template-columns: repeat(2, 1fr); grid-column: 7 / -1; }
-.contact__data > div { min-height: 8.5rem; padding: clamp(1.25rem, 2vw, 2rem); border-right: 1px solid rgba(255,255,255,0.18); border-bottom: 1px solid rgba(255,255,255,0.18); }
+.contact__data { display: grid; align-self: end; margin: 0; border-top: 1px solid rgba(255,255,255,0.16); border-left: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.035); box-shadow: inset 0 1px 0 rgba(255,255,255,0.022); grid-template-columns: repeat(2, 1fr); grid-column: 7 / -1; }
+.contact__data > div { min-height: 8.5rem; padding: clamp(1.25rem, 2vw, 2rem); border-right: 1px solid rgba(255,255,255,0.16); border-bottom: 1px solid rgba(255,255,255,0.16); }
 .contact__data .contact__wide { min-height: 7.5rem; grid-column: 1 / -1; }
-.contact__data dt { color: rgba(255,255,255,0.46); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.contact__data dt { color: rgba(255,255,255,0.56); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; }
 .contact__data dd { margin-top: 1.2rem; font-size: clamp(0.98rem, 1.3vw, 1.2rem); font-weight: 500; line-height: 1.45; }
 .contact__data address { font: inherit; }
 .contact__data a { position: relative; white-space: nowrap; }
@@ -30,12 +30,8 @@
   .contact { padding-block: 8rem; }
   .contact::before { top: 38%; right: -35%; bottom: 0; width: 150%; }
   .contact__body { display: block; margin-top: 3.5rem; }
-  .contact__title { font-size: clamp(2.5rem, 10.3vw, 4rem); letter-spacing: -0.05em; line-height: 0.96; }
+  .contact__title { font-size: clamp(2.3rem, 9.65vw, 3.8rem); letter-spacing: -0.025em; line-height: 0.96; }
   .contact__action { width: 100%; }
   .contact__data { margin-top: 4rem; grid-template-columns: 1fr; }
   .contact__data > div { min-height: 7.5rem; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .contact__data { backdrop-filter: none; }
 }

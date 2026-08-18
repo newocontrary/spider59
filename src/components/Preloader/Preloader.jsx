@@ -94,7 +94,7 @@ export default function Preloader() {
       <div className="preloader__meta"><span>Security agency</span><span>Perm / 59</span></div>
       <div className="preloader__brand">
         <span className="preloader__word">
-          <strong className="preloader__name">SPIDER</strong>
+          <strong className="preloader__name" data-word="SPIDER" />
           <small className="preloader__subtitle">Безопасность — прежде всего.</small>
         </span>
         <LogoMark className="preloader__mark" />

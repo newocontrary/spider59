@@ -1,15 +1,16 @@
-.statement { --ambient-opacity: 0.07; position: relative; display: flex; min-height: 86svh; align-items: center; overflow: hidden; padding-block: clamp(8rem, 15vw, 14rem); border-bottom: 1px solid var(--color-border); background-color: var(--surface-red-dark); background-image: radial-gradient(circle at 18% 52%, rgba(223,37,49,0.14), transparent 58%); }
-.statement__inner { position: relative; z-index: 1; width: 100%; }
+.statement { --ambient-opacity: 0.07; position: relative; display: flex; min-height: 84svh; align-items: center; overflow: hidden; padding-block: clamp(7.5rem, 12vw, 11rem); border-bottom: 1px solid var(--color-border); background-color: var(--surface-red-dark); background-image: radial-gradient(circle at 16% 44%, rgba(230,37,50,0.18), rgba(111,13,20,0.075) 32%, transparent 62%), radial-gradient(circle at 88% 76%, rgba(128,10,18,0.09), transparent 48%); }
+.statement__inner { position: relative; z-index: 1; width: 100%; transform: translateY(clamp(-7rem, -7vh, -4rem)); }
 .statement__meta { display: flex; align-items: center; gap: 1rem; margin-bottom: clamp(4rem, 8vw, 8rem); color: var(--color-text-muted); font-size: 0.64rem; letter-spacing: 0.14em; }
 .statement__meta > span { color: var(--color-red); }
 .statement__rule { display: block; width: clamp(3rem, 8vw, 8rem); height: 1px; background: var(--color-border); }
-.statement__text { font-size: clamp(3.15rem, 8.2vw, 8.6rem); font-weight: 500; letter-spacing: -0.065em; line-height: 0.9; text-transform: uppercase; }
+.statement__text { font-size: clamp(3.15rem, 7.2vw, 7.65rem); font-weight: var(--font-display-weight); letter-spacing: -0.035em; line-height: 0.9; text-transform: uppercase; }
 .statement__line { display: block; overflow: hidden; margin-block: -0.08em; padding: 0.08em 0.08em 0.08em 0; }
 .statement__line > span { display: block; overflow-wrap: normal; word-break: normal; }
 .statement__text em { color: var(--color-red); font-style: normal; }
 
 @media (max-width: 767px) {
   .statement { min-height: 80svh; }
-  .statement__text { font-size: clamp(2.55rem, 11.7vw, 4.5rem); letter-spacing: -0.055em; line-height: 0.96; }
+  .statement__inner { transform: translateY(-2vh); }
+  .statement__text { font-size: clamp(2.55rem, 10.2vw, 4.25rem); letter-spacing: -0.025em; line-height: 0.96; }
   .statement__line { overflow: visible; }
 }

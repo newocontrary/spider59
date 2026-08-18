@@ -1,20 +1,21 @@
-.footer { --ambient-opacity: 0.035; position: relative; overflow: hidden; padding-top: clamp(4rem, 8vw, 7rem); background: #050505; }
+.footer { --ambient-opacity: 0.035; position: relative; overflow: hidden; padding-top: clamp(4rem, 8vw, 7rem); background: var(--bg-black); }
+.footer::before { position: absolute; z-index: 0; inset: 28% -14% 0 54%; background: radial-gradient(circle at 56% 64%, rgba(158,10,22,0.055), transparent 58%); content: ''; pointer-events: none; }
 .footer__top { position: relative; z-index: 1; display: grid; padding-bottom: clamp(5rem, 9vw, 8rem); grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
 .footer__top nav { display: flex; flex-direction: column; gap: 0.75rem; grid-column: 1 / span 3; }
-.footer__top a { position: relative; width: fit-content; color: var(--color-text-muted); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: color var(--transition-fast); }
+.footer__top a { position: relative; width: fit-content; color: var(--color-text-tertiary); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: color var(--transition-fast); }
 .footer__top a::after { position: absolute; right: 0; bottom: -0.25rem; left: 0; height: 1px; background: currentColor; content: ''; opacity: 0.72; transform: scaleX(0); transform-origin: right; transition: transform var(--transition-fast); }
 .footer__top a:hover { color: var(--color-white); }
 .footer__top a:hover::after, .footer__top a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
-.footer p { color: var(--color-text-muted); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.footer p { color: var(--color-text-tertiary); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .footer__agency { display: flex; align-items: flex-start; gap: 0.85rem; grid-column: 7 / span 2; }
 .footer__agency > span { display: block; width: 1.75rem; height: 1.75rem; flex: 0 0 auto; }
 .footer__top > p { justify-self: end; grid-column: 10 / -1; }
-.footer__word { --reveal-x: 50%; --reveal-y: 50%; position: relative; z-index: 1; width: 100%; padding-inline: max(var(--page-padding), calc((100vw - var(--container-width)) / 2 + var(--page-padding))); color: transparent; font-size: clamp(7rem, 25vw, 24rem); font-weight: 600; letter-spacing: -0.085em; line-height: 0.69; text-transform: uppercase; white-space: nowrap; -webkit-text-stroke: 1px rgba(255,255,255,0.11); }
+.footer__word { --reveal-x: 50%; --reveal-y: 50%; position: relative; z-index: 1; width: 100%; padding-inline: max(var(--page-padding), calc((100vw - var(--container-width)) / 2 + var(--page-padding))); color: transparent; cursor: default; font-family: var(--font-display-outline); font-size: clamp(7rem, 25vw, 24rem); font-weight: 600; letter-spacing: -0.04em; line-height: 0.69; pointer-events: none; text-transform: uppercase; user-select: none; white-space: nowrap; -webkit-text-stroke: 1px rgba(255,255,255,0.11); -webkit-user-drag: none; -webkit-user-select: none; }
 .footer__word::after { position: absolute; inset: 0; padding-inline: inherit; color: transparent; content: attr(data-text); opacity: 0; transition: opacity 450ms var(--ease-premium); -webkit-text-stroke: 1px rgba(255,255,255,0.32); -webkit-mask-image: radial-gradient(circle 12rem at var(--reveal-x) var(--reveal-y), #000 0%, rgba(0,0,0,0.68) 46%, transparent 76%); mask-image: radial-gradient(circle 12rem at var(--reveal-x) var(--reveal-y), #000 0%, rgba(0,0,0,0.68) 46%, transparent 76%); pointer-events: none; }
 .footer.is-pointer-active .footer__word::after { opacity: 1; }
 .footer__bottom { position: relative; z-index: 1; display: grid; margin-top: clamp(2.5rem, 5vw, 4.5rem); padding-block: 1.6rem; border-top: 1px solid var(--color-border); grid-template-columns: 1fr 1fr; }
 .footer__bottom p:last-child { justify-self: end; }
-.footer__bottom a { color: rgba(255,255,255,0.78); transition: color var(--transition-fast); }
+.footer__bottom a { color: rgba(255,255,255,0.58); transition: color var(--transition-fast); }
 .footer__bottom a:hover { color: var(--color-white); }
 
 @media (max-width: 1023px) {

@@ -63,16 +63,16 @@ export default function About() {
             <h2 className="about__title" id="about-title">
               <span className="about__line"><span>Спайдер —</span></span>
               <span className="about__line"><span>безопасность</span></span>
-              <span className="about__line"><span>как <em>система.</em></span></span>
+              <span className="about__line"><span>как <em>система</em></span></span>
             </h2>
           </div>
           <div className="about__content">
             <p className="about__lead">Охранное агентство «Спайдер» работает на пермском рынке более 19 лет, объединяя техническую охрану, круглосуточный пульт и группы быстрого реагирования.</p>
             <p className="about__copy">Для каждого объекта формируется собственная схема защиты: оборудование фиксирует событие, оператор принимает сигнал, а ближайший экипаж получает данные для выезда.</p>
             <dl className="about__facts">
-              <div><dt>Опыт</dt><dd>Более 19 лет работы</dd></div>
-              <div><dt>Пульт</dt><dd>Контроль 24 часа</dd></div>
-              <div><dt>ГБР</dt><dd>Прибытие 5–7 минут</dd></div>
+              <div><dt>Опыт</dt><dd><strong>19+</strong><span>лет работы</span></dd></div>
+              <div><dt>Пульт</dt><dd><strong>24/7</strong><span>контроль пульта</span></dd></div>
+              <div><dt>ГБР</dt><dd><strong>5–7 мин</strong><span>прибытие ГБР</span></dd></div>
             </dl>
           </div>
         </div>
